@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        @apply antialiased;
+    }
+    
+    a {
+      @apply text-black underline underline-offset-2 decoration-gray-300;
+    }
+
+    .stealth-link {
+        @apply text-current no-underline
+    }
+  }
