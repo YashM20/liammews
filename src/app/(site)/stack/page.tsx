@@ -1,6 +1,6 @@
 import { getStacks } from "../../../sanity/sanity-utils";
 import StackItem from "../../../components/StackItem";
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 
 export default async function Stack() {
   const stacks = await getStacks();

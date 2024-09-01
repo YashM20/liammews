@@ -1,6 +1,6 @@
 import { getBooks } from "../../../sanity/sanity-utils";
 import BookItem from "../../../components/BookItem";
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 
 export default async function Book() {
   const books = await getBooks();

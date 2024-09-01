@@ -1,5 +1,5 @@
 // page.tsx
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 
 export default async function Home() {
   return (

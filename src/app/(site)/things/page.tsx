@@ -1,6 +1,6 @@
 import { getThings } from "../../../sanity/sanity-utils";
 import ThingItem from "../../../components/ThingItem";
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 
 export default async function Things() {
   const things = await getThings();

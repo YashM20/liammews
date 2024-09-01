@@ -1,6 +1,6 @@
 import { getPosts } from "../../../sanity/sanity-utils";
 import FeedItem from "../../../components/FeedItem";
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 
 export default async function Home() {
   const posts = await getPosts();
