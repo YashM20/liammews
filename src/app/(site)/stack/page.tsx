@@ -1,12 +1,12 @@
 import { getStacks } from "../../../sanity/sanity-utils";
-import StackItem from "../../../components/Stack";
-import RootLayout from '../layout';
+import StackItem from "../../../components/StackItem";
+import Layout from '@/components/Layout';
 
 export default async function Stack() {
   const stacks = await getStacks();
 
   return (
-    <RootLayout pageName="Stack">
+    <Layout pageName="stack">
     <div className="py-5 container max-w-2xl">
       {stacks?.length > 0 ? (
         stacks.map((stack: any) => <StackItem key={stack._id} stack={stack} />)
@@ -14,6 +14,6 @@ export default async function Stack() {
         <p>No posts found</p>
       )}
     </div>
-    </RootLayout>
+    </Layout>
   );
 }

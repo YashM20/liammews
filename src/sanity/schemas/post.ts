@@ -43,6 +43,24 @@ const post = {
         },
       },
       {
+        name: "mainImageCaption",
+        title: "Main image caption",
+        type: "string",
+      },
+      {
+        name: "secondaryImage",
+        title: "Secondary image",
+        type: "image",
+        options: {
+          hotspot: true,
+        },
+      },
+      {
+        name: "secondaryImageCaption",
+        title: "Secondary image caption",
+        type: "string",
+      },
+      {
         name: "publishedAt",
         title: "Published at",
         type: "datetime",
@@ -54,17 +72,16 @@ const post = {
         type: "blockContent",
       },
       {
+        name: "summaryText",
+        title: "Summary Text",
+        type: "text",
+      },
+      {
         title: 'Category',
         name: 'category',
-        type: 'array',
-        of: [
-            {
-                type: 'reference',
-                to: [
-                    {type: 'postCategory'},
-                ],
-            },
-            
+        type: 'reference',
+        to: [
+          {type: 'postCategory'},
         ],
     },
     ],

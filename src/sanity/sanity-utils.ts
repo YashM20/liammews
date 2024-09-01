@@ -34,15 +34,6 @@ export async function sanityFetch<QueryResponse>({
   );
 }
 
-export const getPosts = async () => {
-  const data: Feed[] = await sanityFetch({
-    query: postQuery,
-    qParams: {},
-    tags: ["post", "category"],
-  });
-  return data;
-};
-
 export const getPostBySlug = async (slug: string) => {
   const data: Feed = await sanityFetch({
     query: postQueryBySlug,
@@ -76,6 +67,15 @@ export const getStacks = async () => {
     query: stackQuery,
     qParams: {},
     tags: ["stack", "category"],
+  });
+  return data;
+};
+
+export const getPosts = async () => {
+  const data: Feed[] = await sanityFetch({
+    query: postQuery,
+    qParams: {},
+    tags: ["feed", "category"],
   });
   return data;
 };

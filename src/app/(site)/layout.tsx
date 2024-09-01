@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "@/components/Header";
 import '../globals.css';
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
@@ -11,14 +10,12 @@ type RootLayoutProps = {
 
 export default function RootLayout({
   children,
-  pageName,
 }: Readonly<RootLayoutProps>) {
   return (
     <>
-      <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} bg-white dark:bg-gray-950 text-gray-950 dark:text-white`}>
         <body>
-          <Header pageName={pageName} />
-          <main className="container max-w-7xl mb-40">{children}</main>
+          {children}
         </body>
       </html>
     </>

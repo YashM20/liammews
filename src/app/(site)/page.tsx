@@ -1,16 +1,18 @@
 // page.tsx
-import RootLayout from './layout';
+import Layout from '@/components/Layout';
 
-export default function Home() {
+export default async function Home() {
   return (
-    <RootLayout pageName="Home">
-      <div className="py-5 container max-w-2xl">
-        <h1 className='font-medium'>Liam Mews</h1>
-        <h2 className='text-gray-500 font-medium mb-12'>Designer & Front-End Developer</h2>
-        <p className=''>
-          I'm currently working at <a href="https://makebuild.studio/">MakeBuild</a>, designing and <span className='font-mono'>building</span> next-level websites with Webflow. I'm also the founder of <a href="https://gooddesign.tools/">Good Design Tools</a> an online tool helping designers find the best tools to optimise their workflow.
+    <Layout pageName="index">
+      <div className="py-5 container-md">
+
+          <h1 className='mb-12'>Liam Mews</h1>
+
+
+        <p className='prose dark:prose-invert'>
+        Occaecat est labore labore Lorem quis in Lorem irure fugiat occaecat ex est. Occaecat deserunt et quis elit enim minim occaecat est. Culpa elit sint ad pariatur irure consectetur pariatur commodo. Irure do quis enim est aute Lorem do amet ipsum aute aute proident aliquip nulla. Irure consectetur laboris qui deserunt nulla proident. Dolor esse excepteur voluptate consectetur do laborum qui. Laboris enim non esse.
         </p>
       </div>
-    </RootLayout>
+    </Layout>
   );
 }

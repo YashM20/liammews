@@ -13,6 +13,18 @@
     }
 
     .stealth-link {
-        @apply text-current no-underline
+        @apply text-current no-underline;
+    }
+
+    .long-form {
+        @apply prose leading-6;
+    }
+
+    .container-md {
+        @apply container max-w-2xl;
+    }
+
+    .container-lg {
+        @apply container max-w-7xl;
     }
   }

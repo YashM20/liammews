@@ -11,7 +11,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ name, slug }) => {
         <li key={name} className='w-full'>
             <Link
             href={`/${slug}`}
-            className='flex w-[100%] stealth-link p-3 rounded-md hover:bg-gray-50'
+            className='flex w-[100%] stealth-link p-3 rounded-md hover:bg-gray-50 focus:bg-gray-50 focus:outline-none'
             >
                 {name}
             </Link>

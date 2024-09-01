@@ -9,6 +9,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            lineHeight: '1.5rem',
+            a: {
+              color: 'inherit',
+              fontWeight: 'regular',
+              textDecorationColor: '#d4d4d4',
+              '&:hover': {
+                color: 'black',
+              },
+            },
+          },
+        },
+      },
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
@@ -20,7 +35,6 @@ const config: Config = {
       },
       container: {
         center: true,
-        padding: '1rem',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

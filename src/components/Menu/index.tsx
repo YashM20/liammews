@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HiX } from "react-icons/hi";
 import MenuItem from './menuItem';
 
 const DialogBox: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
   const toggleDialog = useCallback(() => {
     setIsOpen(prev => !prev);
@@ -27,6 +28,13 @@ const DialogBox: React.FC = () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
+
+  useEffect(() => {
+    if (isOpen && firstLinkRef.current) {
+      firstLinkRef.current.focus();
+    }
+  }, [isOpen]);
+
 
   return (
     <div>
@@ -69,10 +77,6 @@ const DialogBox: React.FC = () => {
                     <MenuItem name="Reading" slug="reading" />
                 </ul>
               </div>
-            </div>
-
-            <div id='menu-footer' className='p-4'>
-              <p>poo</p>
             </div>
 
           </div>
